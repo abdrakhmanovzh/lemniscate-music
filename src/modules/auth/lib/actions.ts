@@ -1,5 +1,6 @@
 'use server'
 
+import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
 
@@ -17,4 +18,6 @@ export async function login() {
 export async function logout() {
   cookies().set('access_token', '', { maxAge: 0 })
   cookies().set('refresh_token', '', { maxAge: 0 })
+
+  revalidatePath('/')
 }

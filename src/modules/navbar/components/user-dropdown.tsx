@@ -12,6 +12,10 @@ import { LogoutButton } from './logout-button'
 export async function UserDropdown() {
   const { data: user } = await getUser()
 
+  if (!user) {
+    return null
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

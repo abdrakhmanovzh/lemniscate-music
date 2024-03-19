@@ -8,7 +8,7 @@ interface Props {
 
 export function ArtistCard({ imageUrl, name }: Props) {
   return (
-    <Card className="border-2 shadow-none">
+    <Card className="border-2 shadow-md">
       <div className="flex items-center gap-4 p-4">
         <Image
           className="h-[100px] w-[100px] rounded-md object-cover"
