@@ -22,7 +22,9 @@ export default function RootLayout({
       <body className={cn(GeistSans.className, 'dark:bg-base-black flex h-screen flex-col')}>
         <ThemeProvider disableTransitionOnChange defaultTheme="dark" attribute="class" enableSystem>
           <Navbar />
-          <main className="flex flex-1 flex-col px-4 lg:px-[15%]">{children}</main>
+          <main className="flex flex-1 flex-col px-4 lg:px-[5%] xl:px-[10%] 2xl:px-[15%]">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
