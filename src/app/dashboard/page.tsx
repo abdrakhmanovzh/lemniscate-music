@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <div className="flex w-full flex-col gap-20 pt-[8%]">
+    <div className="flex w-full flex-col gap-20 pb-10 pt-[8%]">
       <div className="flex w-full flex-col gap-10 lg:flex-row">
         <DashboardTracks />
         <DashboardArtists />
