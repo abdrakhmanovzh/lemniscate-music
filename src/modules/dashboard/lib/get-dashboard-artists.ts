@@ -13,6 +13,11 @@ export async function getDashboardArtists(): Promise<APIResponse<TArtist[]>> {
         success: true,
         data: artists
       }
+    } else if (response.status === 403) {
+      return {
+        message: 'you need a spotify premium account to access this feature',
+        success: false
+      }
     } else {
       throw new Error('failed to fetch the artists')
     }

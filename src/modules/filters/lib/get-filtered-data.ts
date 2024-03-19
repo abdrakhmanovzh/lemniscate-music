@@ -18,6 +18,11 @@ export async function getFilteredData({
         data: data.items,
         success: true
       }
+    } else if (response.status === 403) {
+      return {
+        message: 'you need a spotify premium account to access this feature',
+        success: false
+      }
     } else {
       throw new Error('failed to fetch the data')
     }

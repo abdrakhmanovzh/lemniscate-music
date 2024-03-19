@@ -13,6 +13,11 @@ export async function getDashboardTracks(): Promise<APIResponse<TTrack[]>> {
         success: true,
         data: tracks
       }
+    } else if (response.status === 403) {
+      return {
+        message: 'you need a spotify premium account to access this feature',
+        success: false
+      }
     } else {
       throw new Error('failed to fetch the tracks')
     }
