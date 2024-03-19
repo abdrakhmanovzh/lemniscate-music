@@ -20,8 +20,8 @@ export function TrackCard({ imageUrl, artist, title }: Props) {
         />
 
         <div className="flex flex-col gap-1.5">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">{artist}</p>
+          <h3 className="line-clamp-2 text-lg font-semibold">{title}</h3>
+          <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-400">{artist}</p>
         </div>
       </div>
     </Card>
